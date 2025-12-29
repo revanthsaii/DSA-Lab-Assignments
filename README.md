@@ -1,7 +1,7 @@
 # DSA Lab Assignments
 
 Design and Analysis of Algorithms - Lab assignments in C  
-**Semester:** Aug - Dec 2024
+**Semester:** Aug - Dec 2025
 
 ## Assignments Overview
 
