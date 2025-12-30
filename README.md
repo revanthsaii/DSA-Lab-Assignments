@@ -44,7 +44,7 @@ gcc assignment_name.c -o output
 - Backtracking
 - Branch & Bound
 - Pattern Matching Algorithms
-- - Constraint Satisfaction Problems
+- Constraint Satisfaction Problems
 
 ## Key Implementations
 
@@ -54,4 +54,4 @@ gcc assignment_name.c -o output
 - 0/1 Knapsack Problem
 - N-Queens Problem
 - KMP Pattern Matching
-- - Timetable Generator (Backtracking + Constraint Satisfaction)
+- Timetable Generator (Backtracking + Constraint Satisfaction)
