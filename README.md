@@ -20,6 +20,7 @@ Design and Analysis of Algorithms - Lab assignments in C
 | 11 | Backtracking | ✓ |
 | 12 | Branch & Bound | ✓ |
 | 13 | Pattern Matching | ✓ |
+| 14 | College Timetable Generator (Backtracking + Constraints) | ✓ |
 
 ## How to Run
 
@@ -43,6 +44,7 @@ gcc assignment_name.c -o output
 - Backtracking
 - Branch & Bound
 - Pattern Matching Algorithms
+- - Constraint Satisfaction Problems
 
 ## Key Implementations
 
@@ -52,3 +54,4 @@ gcc assignment_name.c -o output
 - 0/1 Knapsack Problem
 - N-Queens Problem
 - KMP Pattern Matching
+- - Timetable Generator (Backtracking + Constraint Satisfaction)
