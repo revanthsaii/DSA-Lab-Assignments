@@ -1,0 +1,7 @@
+Tree Traversals Output
+Inorder: 1 2 3 4 5 6 7
+Preorder: 4 2 1 3 6 5 7
+Postorder: 1 3 2 5 7 6 4
+Levelorder: 4 2 6 1 3 5 7
+Height: 2
+Leaf Count: 4
