@@ -1,0 +1,108 @@
+===== GRAPH ALGORITHMS =====
+
+1. BREADTH-FIRST SEARCH (BFS)
+
+Graph:
+  0 -- 1 -- 3
+  |         |
+  2 ------- 4
+
+Adjacency List:
+0: [1, 2]
+1: [0, 3]
+2: [0, 4]
+3: [1, 4]
+4: [2, 3]
+
+BFS from Source 0:
+Visit Order: 0 -> 1 -> 2 -> 3 -> 4
+Distance from 0:
+  0: 0
+  1: 1
+  2: 1
+  3: 2
+  4: 2
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+
+---
+
+2. DEPTH-FIRST SEARCH (DFS)
+
+DFS from Source 0 (Recursive):
+Visit Order: 0 -> 1 -> 3 -> 4 -> 2
+
+DFS from Source 0 (Iterative - Stack):
+Visit Order: 0 -> 2 -> 4 -> 3 -> 1
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+Approach: Recursion or Stack-based iteration
+
+---
+
+3. TOPOLOGICAL SORT (DAG)
+
+Directed Acyclic Graph:
+5 -> 2 -> 3
+4 -> 2
+4 -> 1
+5 -> 0
+1 -> 3
+
+Topological Order: 5 -> 4 -> 2 -> 1 -> 0 -> 3
+
+Alternative Order: 4 -> 5 -> 2 -> 1 -> 3 -> 0
+
+Using Kahn's Algorithm (BFS):
+Indegree: {0: 1, 1: 1, 2: 2, 3: 2, 4: 0, 5: 0}
+Order: 5 -> 4 -> 2 -> 1 -> 0 -> 3
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+
+---
+
+4. CONNECTED COMPONENTS
+
+Undirected Graph:
+Component 1: 0-1-3-4-2
+Component 2: 5-6
+Component 3: 7
+
+DFS-based Connected Components:
+Component 1: [0, 1, 2, 3, 4]
+Component 2: [5, 6]
+Component 3: [7]
+
+Total Components: 3
+Largest Component: 0 (size 5)
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+
+---
+
+5. BIPARTITE CHECK
+
+Graph:
+Set A: {0, 2}
+Set B: {1, 3}
+
+Edges: 0-1, 0-3, 2-1, 2-3
+Is Bipartite: Yes
+Coloring: 0->Red, 1->Blue, 2->Red, 3->Blue
+
+Time Complexity: O(V + E)
+Space Complexity: O(V)
+Approach: 2-coloring using BFS/DFS
+
+---
+
+Summary:
+- BFS: Level-order traversal, shortest path in unweighted graphs
+- DFS: Recursive/Stack-based, useful for topological sorting
+- Topological Sort: For DAGs, represents dependency order
+- Connected Components: Grouping of connected vertices
+- Bipartite: Graph coloring with 2 colors
