@@ -1,0 +1,17 @@
+===== MERGE SORT (Divide-Conquer) =====
+
+Input Array: 38 27 43 3 9 82 10
+
+Dividing Phase:
+[38 27 43 3] [9 82 10]
+[38 27] [43 3] [9 82] [10]
+[38] [27] [43] [3] [9] [82] [10]
+
+Merging Phase:
+[27 38] [3 43] [9 82] [10]
+[3 27 38 43] [9 10 82]
+
+Final Sorted Array: 3 9 10 27 38 43 82
+
+Time Complexity: O(n log n)
+Space Complexity: O(n)
