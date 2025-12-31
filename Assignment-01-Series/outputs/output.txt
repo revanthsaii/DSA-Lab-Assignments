@@ -1,0 +1,13 @@
+===== SERIES ANALYSIS =====
+
+Arithmetic Series: a=5, d=3, n=10
+Sum = 185
+
+Geometric Series: a=2, r=3, n=8
+Sum = 6560.00
+
+Sum of Natural Numbers (1 to 100)
+Sum = 5050
+
+Sum of Squares (1^2 to 20^2)
+Sum = 2870
