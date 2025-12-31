@@ -1,0 +1,6 @@
+KMP String Pattern Matching
+Text: ABABDABACDABABCABAB
+Pattern: ABABCABAB
+Matches found at positions:
+Position 9
+Total matches: 1
