@@ -1,0 +1,99 @@
+===== DYNAMIC PROGRAMMING SOLUTIONS =====
+
+1. FIBONACCI SEQUENCE (Memoization)
+
+Input: n = 10
+Fibonacci(10) = 55
+
+DP Table:
+F(0) = 0
+F(1) = 1
+F(2) = 1
+F(3) = 2
+F(4) = 3
+F(5) = 5
+F(6) = 8
+F(7) = 13
+F(8) = 21
+F(9) = 34
+F(10) = 55
+
+Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+Approach: Top-down DP with Memoization
+
+---
+
+2. 0/1 KNAPSACK PROBLEM
+
+Capacity: 10
+Items: [(weight: 2, value: 10), (weight: 3, value: 20), (weight: 5, value: 30), (weight: 7, value: 40)]
+
+DP Table (Weight x Value):
+Item 0: Max Value = 10 (weight: 2)
+Item 1: Max Value = 30 (weight: 5)
+Item 2: Max Value = 40 (weight: 7)
+Item 3: Max Value = 40 (weight: 10, items: 1 and 3)
+
+Maximum Value: 40
+Items Selected: Item 1 (weight: 3, value: 20) + Item 3 (weight: 7, value: 40)
+Total Weight: 10
+
+Time Complexity: O(n * W)
+Space Complexity: O(n * W)
+Approach: Bottom-up DP with 2D Table
+
+---
+
+3. LONGEST COMMON SUBSEQUENCE (LCS)
+
+String 1: "ABCDGH"
+String 2: "AEDFHR"
+
+LCS: "ADH"
+Length: 3
+
+DP Table:
+     "" A  E  D  F  H  R
+"" [ 0  0  0  0  0  0  0]
+A  [ 0  1  1  1  1  1  1]
+B  [ 0  1  1  1  1  1  1]
+C  [ 0  1  1  1  1  1  1]
+D  [ 0  1  1  2  2  2  2]
+G  [ 0  1  1  2  2  2  2]
+H  [ 0  1  1  2  2  3  3]
+
+Time Complexity: O(m * n)
+Space Complexity: O(m * n)
+Approach: Bottom-up DP with 2D Table
+
+---
+
+4. COIN CHANGE PROBLEM
+
+Coins: [1, 2, 5]
+Amount: 5
+
+Minimum Coins Needed: 1 coin (5)
+
+DP Array:
+Amount 0: 0 coins
+Amount 1: 1 coin (1)
+Amount 2: 1 coin (2)
+Amount 3: 2 coins (2+1)
+Amount 4: 2 coins (2+2)
+Amount 5: 1 coin (5)
+
+Time Complexity: O(n * amount)
+Space Complexity: O(amount)
+Approach: Bottom-up DP with 1D Array
+
+---
+
+Summary:
+- All DP solutions follow optimal substructure property
+- Memoization: Top-down approach with recursion + caching
+- Tabulation: Bottom-up approach with iterative DP table
+- Common applications: Optimization problems, sequence problems
