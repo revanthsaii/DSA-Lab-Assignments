@@ -1,0 +1,9 @@
+===== SORTING ALGORITHMS =====
+
+Original Array: 64 34 25 12 22 11 90
+
+Bubble Sort: 11 12 22 25 34 64 90
+
+Selection Sort: 11 12 22 25 34 64 90
+
+Insertion Sort: 11 12 22 25 34 64 90
