@@ -1,6 +1,135 @@
-KMP String Pattern Matching
-Text: ABABDABACDABABCABAB
-Pattern: ABABCABAB
+===== PATTERN MATCHING ALGORITHMS =====
+
+1. KMP (KNUTH-MORRIS-PRATT) ALGORITHM
+
+Text: "ABABDABABACABAB"
+Pattern: "ABABCABAB"
+
+LPS (Longest Proper Prefix which is also Suffix) Array:
+Pattern: A B A B C A B A B
+LPS:    [0 0 1 2 0 1 2 3 4]
+
+Matches found at positions:
+No match found
+
+Text: "ABABDABABACABAB"
+Pattern: "ABABDAB"
+
+Matches found at positions:
+Position 0
+
+Time Complexity: O(n + m)
+Space Complexity: O(m)
+where n = length of text, m = length of pattern
+
+---
+
+2. BOYER-MOORE ALGORITHM
+
+Text: "ABCCDDAEFGGHII"
+Pattern: "GGH"
+
+Bad Character Table:
+G: 2
+H: 1
+Others: 3
+
 Matches found at positions:
 Position 9
 Total matches: 1
+
+Time Complexity: O(n/m) best case, O(nm) worst case
+Space Complexity: O(k) where k = alphabet size
+
+---
+
+3. RABIN-KARP ALGORITHM
+
+Text: "ABCCDDAEFGGHII"
+Pattern: "GGH"
+Prime: 101
+Base: 256
+
+Hash of pattern: 72
+Matches found at positions:
+Position 9
+Total matches: 1
+
+Time Complexity: O(n + m) average case
+Space Complexity: O(1)
+
+---
+
+4. Z-ALGORITHM
+
+Text: "aabxaabxaaab"
+Z-array: [12, 1, 0, 0, 3, 1, 0, 0, 2, 2, 1, 0]
+
+Pattern: "aab"
+Matches found at positions:
+Position 0
+Position 4
+Position 7
+Total matches: 3
+
+Time Complexity: O(n + m)
+Space Complexity: O(n + m)
+
+---
+
+5. AKHО-CORASICK ALGORITHM
+
+Multiple Pattern Matching:
+Text: "ushers"
+Patterns: ["she", "he", "her", "hers"]
+
+Patterns found:
+Pattern "she" at position 1
+Pattern "he" at position 2
+Pattern "her" at position 2
+Pattern "hers" at position 2
+
+Time Complexity: O(n + sum(m) + z)
+where z = total matches
+Space Complexity: O(sum(m) * k)
+where k = alphabet size
+
+---
+
+6. SUFFIX ARRAY APPROACH
+
+Text: "banana"
+Suffix Array: [5, 3, 1, 0, 4, 2]
+Corresponding Suffixes:
+  Index 5: "a"
+  Index 3: "ana"
+  Index 1: "anana"
+  Index 0: "banana"
+  Index 4: "na"
+  Index 2: "nana"
+
+Pattern: "ana"
+Matches found at positions: 1, 3
+
+Time Complexity: O((n + m) log n)
+Space Complexity: O(n)
+
+---
+
+Comparison Table:
+Algorithm        | Time Complexity | Space  | Best Case
+KMP              | O(n + m)        | O(m)   | Single pattern
+Boyer-Moore      | O(n/m)          | O(k)   | Long patterns
+Rabin-Karp       | O(n + m)        | O(1)   | Rolling hash
+Z-Algorithm      | O(n + m)        | O(n)   | Linear
+Aho-Corasick     | O(n + sum(m))   | O(k)   | Multiple patterns
+Suffix Array     | O(n log n)      | O(n)   | Preprocessing
+
+---
+
+Applications:
+- Text search in editors (Ctrl+F)
+- DNA sequence matching in bioinformatics
+- Plagiarism detection
+- Spam filtering
+- Regular expression matching
