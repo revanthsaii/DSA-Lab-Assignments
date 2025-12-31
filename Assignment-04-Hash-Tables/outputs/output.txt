@@ -1,0 +1,20 @@
+===== HASH TABLE OPERATIONS =====
+
+Hash Table Size: 10
+Load Factor: 0.7
+
+Insertions:
+insert(15) -> Hash(15) = 5
+insert(25) -> Hash(25) = 5 (Collision, Linear Probing to 6)
+insert(35) -> Hash(35) = 5 (Collision, Linear Probing to 7)
+
+Table State: [-, -, -, -, -, 15, 25, 35, -, -]
+
+Searches:
+search(15) -> Found at index 5
+search(25) -> Found at index 6
+search(45) -> Not found
+
+Deletions:
+delete(25) -> Deleted from index 6
+Table State: [-, -, -, -, -, 15, -, 35, -, -]
