@@ -1,0 +1,19 @@
+===== MINIMUM SPANNING TREE (MST) - KRUSKAL'S ALGORITHM =====
+
+Graph Edges (sorted by weight):
+  Edge (3,4): weight = 2
+  Edge (1,2): weight = 4
+  Edge (2,3): weight = 5
+  Edge (4,5): weight = 6
+  Edge (1,3): weight = 7
+
+MST Edges Selected:
+  Edge (3,4): weight = 2
+  Edge (1,2): weight = 4
+  Edge (2,3): weight = 5
+  Edge (4,5): weight = 6
+
+MST Summary:
+  Total Weight: 17
+  Number of Edges: 4
+  Number of Vertices: 5
