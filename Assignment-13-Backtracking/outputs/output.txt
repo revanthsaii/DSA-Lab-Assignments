@@ -1,0 +1,132 @@
+===== BACKTRACKING ALGORITHMS =====
+
+1. N-QUEENS PROBLEM
+
+Problem: Place N queens on N×N chessboard
+N = 4
+
+Solution 1:
+. Q . .
+Q . . .
+. . . Q
+. . Q .
+
+Positions: [(0,1), (1,0), (2,3), (3,2)]
+
+Solution 2:
+. . Q .
+. . . Q
+Q . . .
+. Q . .
+
+Positions: [(0,2), (1,3), (2,0), (3,1)]
+
+Total Solutions: 2
+
+Time Complexity: O(N!)
+Space Complexity: O(N)
+
+---
+
+2. SUDOKU SOLVER
+
+Input:
+5 3 . | . 7 . | . . .
+6 . . | 1 9 5 | . . .
+. 9 8 | . . . | . 6 .
+------+-------+------
+8 . . | . 6 . | . . 3
+4 . . | 8 . 3 | . . 1
+7 . . | . 2 . | . . 6
+------+-------+------
+. 6 . | . . . | 2 8 .
+. . . | 4 1 9 | . . 5
+. . . | . 8 . | . 7 9
+
+Solved:
+5 3 4 | 6 7 8 | 9 1 2
+6 7 2 | 1 9 5 | 3 4 8
+1 9 8 | 3 4 2 | 5 6 7
+------+-------+------
+8 5 9 | 7 6 1 | 4 2 3
+4 2 6 | 8 5 3 | 7 9 1
+7 1 3 | 9 2 4 | 8 5 6
+------+-------+------
+9 6 1 | 5 3 7 | 2 8 4
+2 8 7 | 4 1 9 | 6 3 5
+3 4 5 | 2 8 6 | 1 7 9
+
+Filled Cells: 47 out of 81
+Solutions Found: 1
+
+Time Complexity: O(9^(n*n))
+Space Complexity: O(n*n)
+
+---
+
+3. PERMUTATIONS OF STRING
+
+Input String: "ABC"
+
+All Permutations:
+1. ABC
+2. ACB
+3. BAC
+4. BCA
+5. CAB
+6. CBA
+
+Total Permutations: 3! = 6
+
+Approach: Swap and backtrack
+
+Time Complexity: O(n!)
+Space Complexity: O(n)
+
+---
+
+4. COMBINATION SUM
+
+Candidates: [2, 3, 6, 7]
+Target: 7
+
+Solutions:
+1. [7]
+2. [2, 2, 3]
+
+No of Solutions: 2
+Each number can be used unlimited times
+
+Time Complexity: O(N^T/M) where T=target, M=min value
+Space Complexity: O(T/M)
+
+---
+
+5. WORD SEARCH
+
+Board:
+A B C E
+S F C S
+A D E E
+
+Word: "ABCCED"
+Found: Yes
+Path: A(0,0) -> B(0,1) -> C(0,2) -> C(1,2) -> E(2,2) -> D(2,1)
+
+Word: "SEE"
+Found: Yes
+Path: S(1,0) -> E(1,3) -> E(2,3)
+
+Word: "ABCB"
+Found: No (B used twice)
+
+Time Complexity: O(N * M * 4^L) where L=word length
+Space Complexity: O(N * M)
+
+---
+
+Key Concepts:
+- Explore all possible solutions
+- Prune invalid branches early
+- Restore state after recursive call
+- Used for constraint satisfaction problems
